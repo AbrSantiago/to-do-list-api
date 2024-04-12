@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDate
 
 @Service
-@Transactional // No toy seguro si va o no
+@Transactional
 class TaskServiceImpl: TaskService {
     @Autowired private lateinit var dao: TaskDAO
 
@@ -19,7 +19,7 @@ class TaskServiceImpl: TaskService {
     }
 
     override fun find(title: String): Task {
-        TODO("Not yet implemented")
+        return dao.findByTitle(title)
     }
 
     override fun findAll(): List<Task> {

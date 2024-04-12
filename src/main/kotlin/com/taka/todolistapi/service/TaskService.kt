@@ -13,3 +13,4 @@ interface TaskService {
 }
 
 // Y qué pasa si hago fun create(task: Task): Task ?
+// RE: Según Franquito da lo mismo

@@ -10,7 +10,7 @@ class Task(var title: String, var description: String?, var expEndDate: LocalDat
     var id: String? = null
     var state = State.TO_DO
     var creationDate: LocalDate = LocalDate.now()
-    lateinit var endDate: LocalDate
+    var endDate: LocalDate? = null
 
     init {
         validateTitle()
